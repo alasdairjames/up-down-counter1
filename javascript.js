@@ -38,7 +38,7 @@ $(".testMoveUp").on("click", function(event){
 	console.log(thisCounter);
 	console.log(prevCounter);
 	//move if appropriate
-	if ( thisCounter > prevCounter) {
+	if ( +thisCounter > +prevCounter) {
 		var parent = $(event.target).parent();
 		var prevParent = $(event.target).parent().prev();
 		$(parent).insertBefore(prevParent);
@@ -57,7 +57,7 @@ $(".testMoveDown").on("click", function(event){
 	console.log(thisCounter);
 	console.log(nextCounter);
 	//move if appropriate
-	if ( thisCounter < nextCounter) {
+	if ( +thisCounter < +nextCounter) {
 		var parent = $(event.target).parent();
 		var nextParent = $(event.target).parent().next();
 		$(parent).insertAfter(nextParent);
